@@ -8,7 +8,7 @@ public class Approach2 {
             if(brr[arr[i]]== true){
                 System.out.println(arr[i]);
             }else{
-                brr[i]=true;
+                brr[arr[i]]=true;
             }
         }
     }
