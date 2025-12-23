@@ -1,5 +1,4 @@
 package Array.ArrayOperation.Insertion;
-
 public class InsertionAtSpecifiedIndex {
     public static void main(String[] args) {
         int[] arr = {0, 10, 20, 40, 50, 60, 70};
@@ -30,5 +29,4 @@ public class InsertionAtSpecifiedIndex {
         for (int n : newArr) {
             System.out.print(n + " ");
         }
-
 */

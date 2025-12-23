@@ -1,5 +1,4 @@
 package TimeandSpaceComplexity;
-
 public class Question3 {
     public static void main(String[] args) {
         int n = 5;
@@ -13,7 +12,6 @@ public class Question3 {
             System.out.println("i");
         }
     }
-
 }
 // calculating Time Complexity
 // Method 1 (Adding Inner loops and then multiplying)
