@@ -1,5 +1,4 @@
 package Array.ArrayOperation.Sort;
-
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {55, 32, 44, 25, 16};
@@ -21,6 +20,5 @@ public class BubbleSort {
         for (int n : arr) {
             System.out.print(n + " ");
         }
-
     }
 }
