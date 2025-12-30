@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.SinglyLinkedList;
 
 public class InsertionAtBeginning {
     static Node head, tail;
