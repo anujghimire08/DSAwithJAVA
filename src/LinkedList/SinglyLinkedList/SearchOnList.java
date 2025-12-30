@@ -14,18 +14,18 @@ public class SearchOnList {
         }
     }
 
-    static void find(int val) {
-        if (head == null) return;
+    static int find(int val) {
+        if (head == null) return -1;
         Node temp = head;
         int idx = 0;
         while (temp != null) {
             if (temp.val == val) {
-                System.out.println("Found at index: " + idx);
-                return;
+                return idx;
             }
             idx++;
             temp = temp.next;
         }
+        return -1;
     }
 
 
@@ -53,6 +53,11 @@ public class SearchOnList {
         atEnd(6);
         atEnd(7);
 //        display();
-        find(sc.nextInt());
+        int foundIndex = find(sc.nextInt());
+        if (foundIndex != -1) {
+            System.out.println("Found at index: " + foundIndex);
+        } else {
+            System.out.println("Not Found on list");
+        }
     }
 }
