@@ -4,6 +4,14 @@ public class InsertionAtSpecifiedPosition {
     static Node head, tail;
     static int size;
 
+    static int get(int idx) {
+        Node temp = head;
+        for (int i = 0; i < idx; i++) {
+            temp = temp.next;
+        }
+        return temp.val;
+    }
+
     static void atHead(int val) {
         Node newNode = new Node(val);
         if (head == null) head = tail = newNode;
@@ -44,7 +52,6 @@ public class InsertionAtSpecifiedPosition {
         }
     }
 
-
     static void display() {
         Node temp = head;
         while (temp != null) {
@@ -52,7 +59,6 @@ public class InsertionAtSpecifiedPosition {
             temp = temp.next;
         }
     }
-
 
     public static void main(String[] args) {
         atTail(1);
@@ -62,5 +68,7 @@ public class InsertionAtSpecifiedPosition {
         atTail(6);
         atSpecifiedPosition(4, 3);
         display();
+        System.out.println();
+        System.out.println(get(2));
     }
 }
