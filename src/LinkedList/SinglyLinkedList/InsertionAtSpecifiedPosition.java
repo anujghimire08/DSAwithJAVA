@@ -42,7 +42,7 @@ public class InsertionAtSpecifiedPosition {
             atTail(val);
         } else {
             Node temp = head;
-            for (int i = 1; i < idx; i++) {
+            for (int i = 0; i < idx; i++) {
                 temp = temp.next;
             }
             Node newNode = new Node(val);
@@ -55,9 +55,10 @@ public class InsertionAtSpecifiedPosition {
     static void display() {
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.val + " ");
+            System.out.print(temp.val + " -> ");
             temp = temp.next;
         }
+        System.out.print("null");
     }
 
     public static void main(String[] args) {
@@ -66,9 +67,9 @@ public class InsertionAtSpecifiedPosition {
         atTail(3);
         atTail(5);
         atTail(6);
-        atSpecifiedPosition(4, 3);
+        atSpecifiedPosition(4, 2);
         display();
         System.out.println();
-        System.out.println(get(2));
+        System.out.println("LL Size: " + get(2));
     }
 }
