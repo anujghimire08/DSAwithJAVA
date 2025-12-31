@@ -70,6 +70,6 @@ public class InsertionAtSpecifiedPosition {
         atSpecifiedPosition(4, 2);
         display();
         System.out.println();
-        System.out.println("LL Size: " + get(2));
+        System.out.println("Search value of index: " + get(2));
     }
 }
