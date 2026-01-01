@@ -1,6 +1,7 @@
-package LinkedList.SinglyLinkedList;
+package LeetCode.singlyLinkedList;
 
-public class LeetCodeSolution {
+public class LeetCodeSolution1 {
+
 //    There is a singly-linked list head and we want to delete a node node in it.
 //
 //    You are given the node to be deleted node. You will not be given access to the first node of head.
