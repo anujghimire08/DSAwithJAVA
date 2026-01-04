@@ -61,12 +61,13 @@ public class MenuDrive {
             System.out.print(temp.val + " -> ");
             temp = temp.next;
         }
+        System.out.println("null");
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        boolean run = true;
-        while (run) {
+        int choice;
+        do {
             System.out.println("1) Insertion at Head\n" +
                     "2) Insertion at Tail\n" +
                     "3) Insertion at Specified Position\n" +
@@ -74,7 +75,7 @@ public class MenuDrive {
                     "5) Display Linked List\n" +
                     "6) Exit Program");
             System.out.print("Enter Your Operation Choice[1-4}: ");
-            int choice = sc.nextInt();
+            choice = sc.nextInt();
 
             switch (choice) {
                 case 1: {
@@ -97,7 +98,8 @@ public class MenuDrive {
                 }
                 case 4: {
                     System.out.print("Insert Index No. whose value you want to access: ");
-                    get(sc.nextInt());
+                    int idx = sc.nextInt();
+                    System.out.println("Value of index " + idx + " is: " + get(idx));
                     break;
                 }
                 case 5: {
@@ -114,7 +116,7 @@ public class MenuDrive {
                 }
 
             }
-        }
+        } while (choice != 5);
     }
 }
 
