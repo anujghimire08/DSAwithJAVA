@@ -42,7 +42,7 @@ public class InsertionAtSpecifiedPosition {
             atTail(val);
         } else {
             Node temp = head;
-            for (int i = 0; i < idx; i++) {
+            for (int i = 0; i < idx - 1; i++) {
                 temp = temp.next;
             }
             Node newNode = new Node(val);

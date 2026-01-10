@@ -99,7 +99,7 @@ public class MenuDrive {
                 case 4: {
                     System.out.print("Insert Index No. whose value you want to access: ");
                     int idx = sc.nextInt();
-                    System.out.println("Value of index " + idx + " is: " + get(idx));
+                    System.out.println("Value of index " + idx + " is:      " + get(idx));
                     break;
                 }
                 case 5: {
