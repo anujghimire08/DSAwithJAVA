@@ -1,4 +1,5 @@
 package LinkedList.CircularLinkedList;
+
 //Java Program to insert a node at the beginning of a Circular Singly Linked list
 public class InsertionAtBeginning {
     static Node head, tail;
@@ -9,9 +10,9 @@ public class InsertionAtBeginning {
             newNode.next = newNode;
             head = tail = newNode;
         } else {
-            tail.next = newNode;
             newNode.next = head;
             head = newNode;
+            tail.next = head;
         }
 
     }
