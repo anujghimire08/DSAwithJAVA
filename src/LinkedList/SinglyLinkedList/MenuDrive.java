@@ -8,6 +8,10 @@ public class MenuDrive {
     static int size;
 
     static int get(int idx) {
+        if (idx < 0 || idx >= size) {
+            System.out.println("Index Invalid!!");
+            return -1;
+        }
         Node temp = head;
         for (int i = 0; i < idx; i++) {
             temp = temp.next;
@@ -45,7 +49,7 @@ public class MenuDrive {
             atTail(val);
         } else {
             Node temp = head;
-            for (int i = 0; i < idx; i++) {
+            for (int i = 0; i < idx - 1; i++) {
                 temp = temp.next;
             }
             Node newNode = new Node(val);
@@ -74,7 +78,7 @@ public class MenuDrive {
                     "4) Access Specified Index Value\n" +
                     "5) Display Linked List\n" +
                     "6) Exit Program");
-            System.out.print("Enter Your Operation Choice[1-4}: ");
+            System.out.print("Enter Your Operation Choice[1-6]: ");
             choice = sc.nextInt();
 
             switch (choice) {
@@ -99,7 +103,7 @@ public class MenuDrive {
                 case 4: {
                     System.out.print("Insert Index No. whose value you want to access: ");
                     int idx = sc.nextInt();
-                    System.out.println("Value of index " + idx + " is:      " + get(idx));
+                    System.out.println("Value of index " + idx + " is: " + ((get(idx)== -1)? "none": get(idx)));
                     break;
                 }
                 case 5: {
@@ -116,7 +120,8 @@ public class MenuDrive {
                 }
 
             }
-        } while (choice != 5);
+        } while (choice != 6);
+        sc.close();
     }
 }
 
