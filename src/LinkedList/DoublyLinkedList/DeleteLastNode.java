@@ -1,46 +1,49 @@
 package LinkedList.DoublyLinkedList;
 
-public class DeleteFirstNode {
+public class DeleteLastNode {
     static DNode head, tail;
 
-    static void atTail(int val) {
+    static void atHead(int val) {
         DNode newNode = new DNode(val);
         if (head == null) {
             head = tail = newNode;
         } else {
-            newNode.prev = tail;
-            tail.next = newNode;
-            tail = newNode;
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
         }
+
     }
 
-
-    static void deleteHead() {
+    static void deleteTail() {
         if (head == null) return;
-        if (head == tail) {
+
+        if (head == tail) { // only one node
             head = tail = null;
             return;
         }
-        head = head.next;
-//        head.prev.next = null;
-        head.prev = null;
+
+        tail = tail.prev;
+        tail.next = null;
     }
 
     static void display() {
+        if (head == null) return;
         DNode temp = head;
         while (temp != null) {
-            System.out.print(temp.val + " ⇌ ");
+            System.out.print(temp.val + " -> ");
             temp = temp.next;
         }
         System.out.println("null");
     }
 
     public static void main(String[] args) {
-        atTail(10);
-        atTail(20);
-        atTail(30);
+        atHead(10);
+        atHead(20);
+        atHead(30);
+        atHead(40);
         display();
-        deleteHead();
+        deleteTail();
         display();
     }
 }
