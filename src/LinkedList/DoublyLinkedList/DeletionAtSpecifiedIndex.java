@@ -43,11 +43,11 @@ public class DeletionAtSpecifiedIndex {
     }
 
     static void deleteAtSpecifiedIndex(int idx) {
-        if (idx < 0 || idx > size || head == null) return;
+        if (idx < 0 || idx >= size || head == null) return;
         if (idx == 0) {
             deleteHead();
             return;
-        } else if (idx == size) {
+        } else if (idx == size - 1) {
             deleteTail();
             return;
         } else {
@@ -55,12 +55,10 @@ public class DeletionAtSpecifiedIndex {
             for (int i = 0; i < idx - 1; i++) {
                 temp = temp.next;
             }
-            temp.next.next.prev = temp;
             temp.next = temp.next.next;
-
-            if (temp.next.next == null) tail = temp;
+            temp.next.prev = temp;
+            size--;
         }
-        size--;
     }
 
     static void display() {
