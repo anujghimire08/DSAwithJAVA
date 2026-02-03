@@ -1,24 +1,23 @@
-package LinkedList.CircularLinkedList;
+package LinkedList.CircularLinkedList.CircularSinglyLinkedList;
 
-//Java Program to insert a node at the beginning of a Circular Singly Linked list
-public class InsertionAtBeginning {
+//Java Program to create a Circular Singly Linked list
+public class InsertionAtEnding {
     static Node head, tail;
 
-    static void atBeg(int val) {
+    static void atEnd(int val) {
         Node newNode = new Node(val);
         if (head == null) {
             newNode.next = newNode;
             head = tail = newNode;
         } else {
             newNode.next = head;
-            head = newNode;
-            tail.next = head;
+            tail.next = newNode;
+            tail = newNode;
         }
-
     }
 
     static void display() {
-        if (head == null) return;
+        if(head == null) return;
         Node temp = head;
         do {
             System.out.print(temp.val + " -> ");
@@ -28,12 +27,11 @@ public class InsertionAtBeginning {
     }
 
     public static void main(String[] args) {
-        atBeg(10);
-        atBeg(20);
-        atBeg(30);
-        atBeg(40);
-        atBeg(50);
+        atEnd(10);
+        atEnd(20);
+        atEnd(30);
+        atEnd(40);
+        atEnd(50);
         display();
     }
-
 }

@@ -1,4 +1,4 @@
-package LinkedList.CircularLinkedList;
+package LinkedList.CircularLinkedList.CircularSinglyLinkedList;
 
 public class DeleteFirstNode {
     static Node head, tail;

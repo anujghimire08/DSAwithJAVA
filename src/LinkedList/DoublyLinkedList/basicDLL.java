@@ -14,24 +14,24 @@ public class basicDLL {
     static void display(DNode head) {
         DNode temp = head;
 
-        while (temp!=null){
+        while (temp != null) {
             System.out.print(temp.val + " ");
-            temp= temp.next;
+            temp = temp.next;
         }
 
     }
 
     static void displayRev(DNode tail) {
         DNode temp = tail;
-        while (temp.prev != null) {
+        while (temp.next != null) {
             temp = temp.prev;
         }
 
 
         System.out.print("null");
-        while (temp!=null){
-            System.out.print( " ⇌ " + temp.val );
-            temp= temp.next;
+        while (temp != null) {
+            System.out.print(" ⇌ " + temp.val);
+            temp = temp.prev;
         }
         System.out.print(" ⇌ null");
     }
