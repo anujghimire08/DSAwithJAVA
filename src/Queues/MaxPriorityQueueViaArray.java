@@ -1,10 +1,10 @@
 package Queues;
 
-public class PriorityQueueViaArray {
+public class MaxPriorityQueueViaArray {
     private int size;
     private int[] arr;
 
-    PriorityQueueViaArray(int capacity) {
+    MaxPriorityQueueViaArray(int capacity) {
         arr = new int[capacity];
     }
 
@@ -73,7 +73,7 @@ public class PriorityQueueViaArray {
     }
 
     public static void main(String[] args) {
-        PriorityQueueViaArray pqa = new PriorityQueueViaArray(5);
+        MaxPriorityQueueViaArray pqa = new MaxPriorityQueueViaArray(5);
         pqa.add(20);
         pqa.add(10);
         pqa.add(5);
