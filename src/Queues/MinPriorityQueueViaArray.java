@@ -36,7 +36,7 @@ public class MinPriorityQueueViaArray {
             }
         }
         int minVal = arr[minIdx];
-        for (int i = 0; i < size - 1; i++) {
+        for (int i = minIdx; i < size - 1; i++) {
             arr[i] = arr[i + 1];
         }
         size--;
@@ -54,12 +54,8 @@ public class MinPriorityQueueViaArray {
                 minIdx = i;
             }
         }
-        int topVal = arr[minIdx];
-        for (int i = 0; i < size - 1; i++) {
-            arr[i] = arr[i + 1];
-        }
-        size--;
-        return topVal;
+
+        return arr[minIdx];
     }
 
     int getSize() {
