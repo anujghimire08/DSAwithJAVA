@@ -18,7 +18,7 @@ public class HanoiTower {
     }
 
     private static void Steps(int n) {
-        int step = (2 << n) - 1;
+        int step = (1 << n) - 1;
         System.out.println("Total Step for " + n + " disks is:" + step);
     }
 }
