@@ -2,15 +2,15 @@ package Recursion;
 
 public class PreInPost {
     public static void main(String[] args) {
-        pip(2);
+        pip(3);
     }
 
     private static void pip(int n) {
         if (n == 0) return;
-        System.out.print(n + " ");
+        System.out.print("pre:" + n + " ");
         pip(n - 1);
-        System.out.print(n + " ");
+        System.out.print("in:" + n + " ");
         pip(n - 1);
-        System.out.print(n + " ");
+        System.out.print("post:" + n + " ");
     }
 }
