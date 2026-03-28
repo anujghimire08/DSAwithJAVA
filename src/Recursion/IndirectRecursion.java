@@ -1,5 +1,6 @@
 package Recursion;
 
+//Function A calls Function B, which calls Function A.
 public class IndirectRecursion {
     public static void main(String[] args) {
         int n = 6;
