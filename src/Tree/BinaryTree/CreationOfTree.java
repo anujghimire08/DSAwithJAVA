@@ -1,6 +1,15 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class PostOrderTreeTraversal {
+class Node {
+    int val;
+    Node left, right;
+
+    Node(int val) {
+        this.val = val;
+    }
+}
+
+public class CreationOfTree {
     public static void main(String[] args) {
 //            1
 //          /   \
@@ -20,13 +29,5 @@ public class PostOrderTreeTraversal {
         a.right = c;
         c.left = f;
         c.right = g;
-        display(a);
-    }
-
-    static void display(Node root) {
-        if (root == null) return;
-        display(root.left); // left
-        display(root.right); // right
-        System.out.print(root.val + " "); // root
     }
 }

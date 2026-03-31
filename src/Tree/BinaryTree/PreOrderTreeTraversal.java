@@ -1,6 +1,6 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class MaxValueOfTree {
+public class PreOrderTreeTraversal {
     public static void main(String[] args) {
 //            1
 //          /   \
@@ -20,10 +20,13 @@ public class MaxValueOfTree {
         a.right = c;
         c.left = f;
         c.right = g;
-        System.out.println("Max Value of a Tree : " + Max(a));
+        display(a);
     }
 
-    static int Max(Node root) {
-        return (root == null) ? Integer.MIN_VALUE : Math.max(root.val, Math.max(Max(root.left), Max(root.right)));
+    static void display(Node root) {
+        if (root == null) return;
+        System.out.print(root.val + " "); // root
+        display(root.left); // left
+        display(root.right); // right
     }
 }

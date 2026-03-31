@@ -1,13 +1,13 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class InOrderTreeTraversal {
+public class TreeSize {
     public static void main(String[] args) {
 //            1
 //          /   \
 //         2     3
 //        /  \  /  \
 //       4   5  6   7
-        Node a = new Node(1);
+        Node a = new Node(1); // root
         Node b = new Node(2);
         Node c = new Node(3);
         Node d = new Node(4);
@@ -21,12 +21,18 @@ public class InOrderTreeTraversal {
         c.left = f;
         c.right = g;
         display(a);
+        System.out.println();
+        System.out.println("Size of Tree:" + Size(a));
     }
 
     static void display(Node root) {
         if (root == null) return;
-        display(root.left); // left
-        System.out.print(root.val + " "); // root
-        display(root.right); // right
+        System.out.print(root.val + " ");
+        display(root.left);
+        display(root.right);
+    }
+
+    static int Size(Node root) {
+        return (root == null) ? 0 : 1 + Size(root.left) + Size(root.right);
     }
 }

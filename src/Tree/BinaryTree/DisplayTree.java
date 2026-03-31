@@ -1,13 +1,12 @@
-package Tree;
-
-public class TreeLevels {
+package Tree.BinaryTree;
+public class DisplayTree {
     public static void main(String[] args) {
 //            1
 //          /   \
 //         2     3
 //        /  \  /  \
 //       4   5  6   7
-        Node a = new Node(1); // root
+        Node a = new Node(1);
         Node b = new Node(2);
         Node c = new Node(3);
         Node d = new Node(4);
@@ -20,10 +19,13 @@ public class TreeLevels {
         a.right = c;
         c.left = f;
         c.right = g;
-        System.out.print("Levels of a Tree: " + levels(a));
+        display(a);
     }
 
-    private static int levels(Node root) {
-        return (root == null) ? 0 : 1 + Math.max(levels(root.left), levels(root.right));
+    static void display(Node root) {
+        if (root == null) return;
+        System.out.print(root.val + " ");
+        display(root.left);
+        display(root.right);
     }
 }

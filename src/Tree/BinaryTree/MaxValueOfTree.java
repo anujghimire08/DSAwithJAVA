@@ -1,6 +1,6 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class SumOfValue {
+public class MaxValueOfTree {
     public static void main(String[] args) {
 //            1
 //          /   \
@@ -20,10 +20,10 @@ public class SumOfValue {
         a.right = c;
         c.left = f;
         c.right = g;
-        System.out.println("Sum of Node Value is: " + Sum(a));
+        System.out.println("Max Value of a Tree : " + Max(a));
     }
 
-    static int Sum(Node root) {
-        return (root == null) ? 0 : root.val + Sum(root.left) + Sum(root.right);
+    static int Max(Node root) {
+        return (root == null) ? Integer.MIN_VALUE : Math.max(root.val, Math.max(Max(root.left), Max(root.right)));
     }
 }

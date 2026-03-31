@@ -1,4 +1,4 @@
-package Tree;
+package Tree.BinaryTree;
 public class ProductOfNonZeroValue {
     public static void main(String[] args) {
         //         2

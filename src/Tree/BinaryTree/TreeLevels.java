@@ -1,6 +1,6 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class TreeHeights {
+public class TreeLevels {
     public static void main(String[] args) {
 //            1
 //          /   \
@@ -20,15 +20,10 @@ public class TreeHeights {
         a.right = c;
         c.left = f;
         c.right = g;
-        int levels = levels(a);
-        System.out.print("Height of a Tree: " + height(levels));
+        System.out.print("Levels of a Tree: " + levels(a));
     }
 
     private static int levels(Node root) {
         return (root == null) ? 0 : 1 + Math.max(levels(root.left), levels(root.right));
-    }
-
-    private static int height(int levels) {
-        return levels - 1;
     }
 }

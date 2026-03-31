@@ -1,13 +1,13 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class ProductOfValue {
+public class TreeEdge {
     public static void main(String[] args) {
 //            1
 //          /   \
 //         2     3
 //        /  \  /  \
 //       4   5  6   7
-        Node a = new Node(1);
+        Node a = new Node(1); // root
         Node b = new Node(2);
         Node c = new Node(3);
         Node d = new Node(4);
@@ -20,10 +20,16 @@ public class ProductOfValue {
         a.right = c;
         c.left = f;
         c.right = g;
-        System.out.println("Sum of Node Value is: " + Product(a));
+        int size = Size(a);
+        System.out.println("Edge of Tree:" + Edge(size));
     }
 
-    static int Product(Node root) {
-        return (root == null) ? 1 : root.val * Product(root.left) * Product(root.right);
+    static int Size(Node root) {
+        return (root == null) ? 0 : 1 + Size(root.left) + Size(root.right);
     }
+
+    static int Edge(int size) {
+        return size - 1;
+    }
+
 }

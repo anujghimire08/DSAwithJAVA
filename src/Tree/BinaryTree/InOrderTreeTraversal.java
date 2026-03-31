@@ -1,6 +1,6 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class PreOrderTreeTraversal {
+public class InOrderTreeTraversal {
     public static void main(String[] args) {
 //            1
 //          /   \
@@ -25,8 +25,8 @@ public class PreOrderTreeTraversal {
 
     static void display(Node root) {
         if (root == null) return;
-        System.out.print(root.val + " "); // root
         display(root.left); // left
+        System.out.print(root.val + " "); // root
         display(root.right); // right
     }
 }

@@ -1,13 +1,13 @@
-package Tree;
+package Tree.BinaryTree;
 
-public class TreeEdge {
+public class SumOfValue {
     public static void main(String[] args) {
 //            1
 //          /   \
 //         2     3
 //        /  \  /  \
 //       4   5  6   7
-        Node a = new Node(1); // root
+        Node a = new Node(1);
         Node b = new Node(2);
         Node c = new Node(3);
         Node d = new Node(4);
@@ -20,16 +20,10 @@ public class TreeEdge {
         a.right = c;
         c.left = f;
         c.right = g;
-        int size = Size(a);
-        System.out.println("Edge of Tree:" + Edge(size));
+        System.out.println("Sum of Node Value is: " + Sum(a));
     }
 
-    static int Size(Node root) {
-        return (root == null) ? 0 : 1 + Size(root.left) + Size(root.right);
+    static int Sum(Node root) {
+        return (root == null) ? 0 : root.val + Sum(root.left) + Sum(root.right);
     }
-
-    static int Edge(int size) {
-        return size - 1;
-    }
-
 }

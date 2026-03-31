@@ -1,15 +1,6 @@
-package Tree;
+package Tree.BinaryTree;
 
-class Node {
-    int val;
-    Node left, right;
-
-    Node(int val) {
-        this.val = val;
-    }
-}
-
-public class CreationOfTree {
+public class ProductOfValue {
     public static void main(String[] args) {
 //            1
 //          /   \
@@ -29,5 +20,10 @@ public class CreationOfTree {
         a.right = c;
         c.left = f;
         c.right = g;
+        System.out.println("Sum of Node Value is: " + Product(a));
+    }
+
+    static int Product(Node root) {
+        return (root == null) ? 1 : root.val * Product(root.left) * Product(root.right);
     }
 }
