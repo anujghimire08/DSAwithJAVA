@@ -1,7 +1,7 @@
 package Tree.BinarySearchTree;
 
-public class kthElement {
-    //         50
+public class SortingUsingTree {
+    //     50
 //       /    \
 //     30      70
 //    /  \    /  \
