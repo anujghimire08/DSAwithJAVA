@@ -17,13 +17,13 @@ public class CheckBinaryTreeOrNot {
     public static void main(String[] args) {
 
         // valid bst
-        Node bst = new Node(50);
-        bst.left = new Node(30);
-        bst.right = new Node(70);
-        bst.left.left = new Node(20);
-        bst.left.right = new Node(40);
-        bst.right.left = new Node(60);
-        bst.right.right = new Node(80);
+        root = new Node(50);
+        root.right = new Node(70);
+        root.left = new Node(30);
+        root.left.left = new Node(20);
+        root.left.right = new Node(40);
+        root.right.left = new Node(60);
+        root.right.right = new Node(80);
 
 //        invalid bst
 //        root = new Node(50);
