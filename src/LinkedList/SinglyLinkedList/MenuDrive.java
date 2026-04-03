@@ -59,6 +59,20 @@ public class MenuDrive {
         }
     }
 
+    static int find(int val) {
+        if (head == null) return -1;
+        Node temp = head;
+        int idx = 0;
+        while (temp != null) {
+            if (temp.val == val) {
+                return idx;
+            }
+            idx++;
+            temp = temp.next;
+        }
+        return -1;
+    }
+
     static void display() {
         Node temp = head;
         while (temp != null) {
@@ -77,8 +91,9 @@ public class MenuDrive {
                     "3) Insertion at Specified Position\n" +
                     "4) Access Specified Index Value\n" +
                     "5) Display Linked List\n" +
-                    "6) Exit Program");
-            System.out.print("Enter Your Operation Choice[1-6]: ");
+                    "6) Search Element\n" +
+                    "7) Exit Program");
+            System.out.print("Enter Your Operation Choice[1-7]: ");
             choice = sc.nextInt();
 
             switch (choice) {
@@ -103,7 +118,7 @@ public class MenuDrive {
                 case 4: {
                     System.out.print("Insert Index No. whose value you want to access: ");
                     int idx = sc.nextInt();
-                    System.out.println("Value of index " + idx + " is: " + ((get(idx)== -1)? "none": get(idx)));
+                    System.out.println("Value of index " + idx + " is: " + ((get(idx) == -1) ? "none" : get(idx)));
                     break;
                 }
                 case 5: {
@@ -111,6 +126,11 @@ public class MenuDrive {
                     break;
                 }
                 case 6: {
+                    System.out.print("Enter value to search");
+                    System.out.println((find(sc.nextInt()) == -1) ? "Not Found" : "Found");
+                    break;
+                }
+                case 7: {
                     System.out.println("Closing.....");
                     return;
                 }
@@ -120,7 +140,7 @@ public class MenuDrive {
                 }
 
             }
-        } while (choice != 6);
+        } while (choice != 7);
         sc.close();
     }
 }
