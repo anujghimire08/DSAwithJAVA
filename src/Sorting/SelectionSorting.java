@@ -22,3 +22,28 @@ public class SelectionSorting {
         for (int el : arr) System.out.print(el + " ");
     }
 }
+
+// String Sorting
+
+//public class SelectionSorting {
+//    public static void main(String[] args) {
+//        String[] arr = {"Anuj", "Rajesh", "Sita", "Hari", "Rita", "Binod", "Kiran"};
+//        System.out.print("Before: ");
+//        for (String el : arr) System.out.print(el + " ");
+//        for (int i = 0; i < arr.length; i++) { // no of pass
+//            int min = i;
+//            for (int j = i + 1; j < arr.length; j++) { // searching
+//                if (arr[min].compareTo(arr[j]) > 0) { // check min element idx using lexicographically
+//                    min = j;
+//                }
+//            }
+//            // swapping
+//            String temp = arr[min];
+//            arr[min] = arr[i];
+//            arr[i] = temp;
+//        }
+//        System.out.println();
+//        System.out.print("After: ");
+//        for (String el : arr) System.out.print(el + " ");
+//    }
+//}
