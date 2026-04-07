@@ -30,5 +30,5 @@ public class BubbleSorting {
         }
     }
 }
-//Time Complexity - O(n)
+//Time Complexity - O(n²)
 //Space Complexity - O(1)
