@@ -1,6 +1,6 @@
 package Sorting;
 
-public class InsertionSorting {
+public class InsertionSort {
     public static void main(String[] args) {
         int[] arr = {50, 30, 10, 40, 20};
         System.out.print("Before:" + " ");

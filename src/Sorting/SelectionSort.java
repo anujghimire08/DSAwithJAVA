@@ -1,6 +1,6 @@
 package Sorting;
 
-public class SelectionSorting {
+public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = {49, 74, 25, 36, 88, 18, 31};
         System.out.print("Before: ");
