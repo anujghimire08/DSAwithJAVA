@@ -1,6 +1,6 @@
 package Sorting;
 
-public class CountSort {
+public class CountingSort {
     static void sort(int[] arr) {
 //        finding the largest element of array
         int max = findMax(arr); // 5
