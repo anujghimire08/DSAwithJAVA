@@ -41,6 +41,10 @@ public class LinkedListStack {
         return size;
     }
 
+    static boolean isEmpty() {
+        return head == null;
+    }
+
     static void display() {
         Node temp = head;
         while (temp != null) {
@@ -52,6 +56,7 @@ public class LinkedListStack {
 
     public static void main(String[] args) {
 //        System.out.println(pop());
+        System.out.println(isEmpty());
         push(10);
         push(20);
         push(30);
@@ -63,6 +68,7 @@ public class LinkedListStack {
         display();
         System.out.println(stackSize() + " stack size");
         System.out.println();
+        System.out.println(isEmpty());
         System.out.println(peek());
     }
 }
