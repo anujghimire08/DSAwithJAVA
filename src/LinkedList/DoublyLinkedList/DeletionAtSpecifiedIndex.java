@@ -19,6 +19,7 @@ public class DeletionAtSpecifiedIndex {
     static void deleteHead() {
         if (head == null) return;
         if (head == tail) {
+            size--;
             head = tail = null;
             return;
         }
@@ -33,6 +34,7 @@ public class DeletionAtSpecifiedIndex {
 
         if (head == tail) { // only one node
             head = tail = null;
+            size--;
             return;
         }
 
@@ -46,10 +48,8 @@ public class DeletionAtSpecifiedIndex {
         if (idx < 0 || idx >= size || head == null) return;
         if (idx == 0) {
             deleteHead();
-            return;
         } else if (idx == size - 1) {
             deleteTail();
-            return;
         } else {
             DNode temp = head;
             for (int i = 0; i < idx - 1; i++) {
