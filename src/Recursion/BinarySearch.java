@@ -6,7 +6,7 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] rawArr = {2, 9, 10, 34, 1, 4, 5};
         Arrays.sort(rawArr);
-        int result = search(rawArr, 4, 0, rawArr.length);
+        int result = search(rawArr, 4, 0, rawArr.length - 1);
         System.out.println(result);
     }
 
