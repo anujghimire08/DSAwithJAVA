@@ -7,6 +7,7 @@ public class QueueViaArray {
     QueueViaArray(int capacity) {
         arr = new int[capacity];
     }
+
     void add(int val) {
         if (size >= arr.length) {
             System.out.println("Queue Overflow");
@@ -15,16 +16,17 @@ public class QueueViaArray {
         arr[rear++] = val;
         size++;
     }
+
     int remove() {
         if (size == 0) {
             System.out.println("Queue Empty");
             return -1;
         }
-        int frontVal = arr[front];
-        front++;
+        int frontVal = arr[front++];
         size--;
         return frontVal;
     }
+
     int peek() {
         if (size == 0) {
             System.out.println("Queue Empty");
@@ -33,12 +35,15 @@ public class QueueViaArray {
         return arr[front];
 
     }
+
     boolean isEmpty() {
         return size == 0;
     }
+
     boolean isFull() {
         return size == arr.length;
     }
+
     void display() {
         if (isEmpty()) {
             System.out.println("Queue Empty");
@@ -50,6 +55,7 @@ public class QueueViaArray {
         }
 
     }
+
     public static void main(String[] args) {
         QueueViaArray qa = new QueueViaArray(5);
         System.out.println(qa.isEmpty());
