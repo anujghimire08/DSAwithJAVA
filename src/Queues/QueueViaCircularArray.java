@@ -23,11 +23,8 @@ public class QueueViaCircularArray {
             System.out.println("Queue Empty");
             return -1;
         }
-        int frontVal = arr[front];
-        front++;
-        if (front == arr.length) {
-            front = 0;
-        }
+        int frontVal = arr[front++];
+        if (front == arr.length) front = 0;
         size--;
         return frontVal;
     }
@@ -54,26 +51,33 @@ public class QueueViaCircularArray {
 
     void display() {
         if (!isEmpty()) {
-            if (front >= rear) {
-                for (int i = front; i < arr.length; i++) {
-                    System.out.print(arr[i] + " ");
-                    // front -> end
-                }
-                for (int i = 0; i < rear; i++) {
-                    System.out.print(arr[i] + " ");
-                    // rear-1
-                }
-                System.out.println();
-
-            } else {
-                for (int i = front; i < rear; i++) {
-                    System.out.print(arr[i] + " ");
-                }
-                System.out.println();
+            for (int i = 0; i < size; i++) {
+                System.out.print(arr[(front + i) % arr.length] + " ");
             }
+            System.out.println();
         } else {
             System.out.println("Empty Queue");
         }
+//            if (front >= rear) {
+//                for (int i = front; i < arr.length; i++) {
+//                    System.out.print(arr[i] + " ");
+//                    // front -> end
+//                }
+//                for (int i = 0; i < rear; i++) {
+//                    System.out.print(arr[i] + " ");
+//                    // rear-1
+//                }
+//                System.out.println();
+//
+//            } else {
+//                for (int i = front; i < rear; i++) {
+//                    System.out.print(arr[i] + " ");
+//                }
+//                System.out.println();
+//            }
+//        } else {
+//            System.out.println("Empty Queue");
+//        }
     }
 
     public static void main(String[] args) {
