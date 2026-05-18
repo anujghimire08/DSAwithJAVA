@@ -1,5 +1,14 @@
 package LinkedList.CircularLinkedList.CircularDoublyLinkedList;
 
+class Node {
+    int val;
+    Node next,prev;
+    Node(int val){
+        this.val = val;
+    }
+
+}
+
 public class DeleteAtTail {
     static Node head, tail;
 
