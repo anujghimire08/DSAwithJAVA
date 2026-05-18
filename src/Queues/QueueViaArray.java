@@ -9,7 +9,7 @@ public class QueueViaArray {
     }
 
     void add(int val) {
-        if (size >= arr.length) {
+        if (isFull()) {
             System.out.println("Queue Overflow");
             return;
         }
@@ -18,17 +18,16 @@ public class QueueViaArray {
     }
 
     int remove() {
-        if (size == 0) {
+        if (isEmpty()) {
             System.out.println("Queue Empty");
             return -1;
         }
-        int frontVal = arr[front++];
         size--;
-        return frontVal;
+        return arr[front++];
     }
 
     int peek() {
-        if (size == 0) {
+        if (isEmpty()) {
             System.out.println("Queue Empty");
             return -1;
         }
